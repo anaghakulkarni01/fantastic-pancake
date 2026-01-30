@@ -1,62 +1,58 @@
 import org.junit.Assert;
 import org.junit.Test;
-//import org.junit.jupiter.api.AfterEach;
-//import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 
 public class gradeCalCTest {
-    private gradeCalc grCalculation = new gradeCalc();
-    //System.out.println("grCalculation initialized");
-    
-/*     @BeforeEach
-    void setUp(){
-        grCalculation = new gradeCalc();
-        System.out.println("grCalculation initialized");
-    } 
- */    
-    /* @AfterEach
-    void tearDown() {
-        grCalculation = null; // Clean up
-        System.out.println("Tearing down.");
-    } */
-
+    gradeCalc grCalculation = new gradeCalc();
     @Test    
     @DisplayName("Tests for if else if")  
 
+    public void testAll() {
+        testforO();
+        testforAA();
+        testforA();
+        testforB();
+        testforC();
+        testforD();
+        testforF();
+        testforFBorderCase();
+        testforFZero();
+    }
+    
     public void testforO() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("O", grCalculation.grade(99));
+        System.out.println("Grade O...");
     }
     public void testforAA() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("A+", grCalculation.grade(85));
+        System.out.println("Grade A+");
     }
     public void testforA() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("A", grCalculation.grade(79));
+        System.out.println("Grade A");
     }
     public void testforB() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("B", grCalculation.grade(69));
+        System.out.println("Grade B");
     }
     public void testforC() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("C", grCalculation.grade(58));
+        System.out.println("Grade C");
     }
     public void testforD() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("D", grCalculation.grade(45));
+        System.out.println("Grade D");
     }
     public void testforFBorderCase() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("F", grCalculation.grade(39));
+        System.out.println("Grade F Border Case");
     }
     public void testforF() {
-        //gradeCalc grCalculation = new gradeCalc();
-        Assert.assertEquals("F", grCalculation.grade(10));
+         Assert.assertEquals("F", grCalculation.grade(10));
+        System.out.println("Grade F");
     }
     public void testforFZero() {
-        //gradeCalc grCalculation = new gradeCalc();
         Assert.assertEquals("F", grCalculation.grade(0));
+        System.out.println("Grade F for Zero ...");
     }
 }

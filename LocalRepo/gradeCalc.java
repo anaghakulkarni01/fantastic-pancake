@@ -1,19 +1,21 @@
 public class gradeCalc {
     public String grade (int percentage) {
-              
+        String grade = " ";      
         if (percentage < 40)
-            return "F";
+            grade =  "F";
         else if (percentage < 50)
-            return "D";
+            grade = "D";
         else if (percentage < 60)
-            return "C";
+            grade = "C";
         else if (percentage < 70)
-            return "B";
-        else if (percentage < 78)
-            return "A";
+            grade = "B";
+        else if (percentage < 80)
+            grade = "A";
         else if (percentage < 90)
-            return "A+";
-        else return "O";
+            grade = "A+";
+        else grade = "O";
+        System.out.println("Grade is : "+ grade);
+        return grade;
     }
         
 }
