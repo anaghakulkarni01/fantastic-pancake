@@ -1,7 +1,12 @@
 public class gradeCalc {
     public String grade (int percentage) {
         String grade = " ";      
-        if (percentage < 40)
+        if (percentage < 0) {
+           // throw new IllegalArgumentException("Percentage can not be negative");
+            System.out.println("Grade is F");
+            grade = "F";
+        }
+        else if (percentage < 40)
             grade =  "F";
         else if (percentage < 50)
             grade = "D";
